@@ -1,2 +1,2 @@
 # OIBSIP
-Internship project repository for OBiSP, containing assigned tasks, exercises, and project work.
+Oasis Infobyte Internship Program (OIBSIP) — Task submissions, projects, and internship work.
