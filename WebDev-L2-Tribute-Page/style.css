@@ -1,0 +1,267 @@
+/* ================================
+   GENERAL STYLING
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background-color: #f5f1ea;
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero {
+    background-color: #263238;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.hero img {
+    width: 280px;
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    border: 6px solid white;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* ================================
+   COMMON SECTION STYLING
+================================ */
+
+section {
+    padding: 60px 20px;
+}
+
+section h2 {
+    font-family: Georgia, serif;
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 30px;
+    color: #263238;
+}
+
+
+/* ================================
+   BIOGRAPHY
+================================ */
+
+.biography {
+    background-color: #f5f1ea;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.biography p {
+    max-width: 850px;
+    margin: 0 auto 20px;
+    font-size: 1.05rem;
+}
+
+
+/* ================================
+   TIMELINE
+================================ */
+/* ================================
+   TIMELINE CARDS
+================================ */
+
+.timeline {
+    background-color: #e3e8ea;
+}
+
+.timeline-container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.timeline-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #263238;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-card span {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #263238;
+}
+
+.timeline-card h3 {
+    font-family: Georgia, serif;
+    margin: 8px 0;
+    color: #333;
+}
+
+.timeline-card p {
+    font-size: 1rem;
+}
+
+
+/* ================================
+   QUOTE SECTION
+================================ */
+
+.quote {
+    background-color: #263238;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.quote h2 {
+    color: white;
+    margin-bottom: 35px;
+}
+
+.quote blockquote {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-family: Georgia, serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.quote p {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background-color: #171f22;
+    color: #ddd;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* ================================
+   FOOTER LINKS
+================================ */
+
+footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    opacity: 0.7;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 45px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero img {
+        width: 230px;
+    }
+
+    section {
+        padding: 45px 15px;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .biography p {
+        font-size: 1rem;
+    }
+
+    .quote blockquote {
+        font-size: 1.4rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .timeline-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero img {
+        width: 200px;
+    }
+
+    section h2 {
+        font-size: 1.7rem;
+    }
+
+    .timeline ol {
+        padding-left: 20px;
+    }
+
+    .timeline li {
+        padding: 12px 15px;
+    }
+
+    .quote blockquote {
+        font-size: 1.2rem;
+    }
+}
