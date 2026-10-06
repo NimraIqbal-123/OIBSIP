@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="A modern and responsive To-Do List application for managing daily tasks.">
+
+    <title>TaskFlow | To-Do App</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- =========================================
+             APP HEADER
+        ========================================== -->
+
+        <header class="header">
+
+            <div class="brand-icon">
+                ✓
+            </div>
+
+            <div class="brand-text">
+                <span class="brand-name">TaskFlow</span>
+                <span class="brand-subtitle">Daily Productivity</span>
+            </div>
+
+            <h1>MY TO-DO LIST</h1>
+
+            <p>
+                Organize your tasks, stay focused, and get things done.
+            </p>
+
+        </header>
+        <!-- =========================================
+     TASK STATISTICS
+========================================= -->
+
+        <section class="stats-container">
+
+            <div class="stat-card">
+                <div class="stat-icon total-icon">📋</div>
+
+                <div class="stat-info">
+                    <span>Total Tasks</span>
+                    <strong id="totalTasks">0</strong>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon pending-stat-icon">⏳</div>
+
+                <div class="stat-info">
+                    <span>Pending</span>
+                    <strong id="totalPending">0</strong>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon completed-stat-icon">✓</div>
+
+                <div class="stat-info">
+                    <span>Completed</span>
+                    <strong id="totalCompleted">0</strong>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon rate-icon">📈</div>
+
+                <div class="stat-info">
+                    <span>Completion Rate</span>
+                    <strong id="completionRate">0%</strong>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- =========================================
+             ADD TASK
+        ========================================== -->
+        <!-- =========================================
+     PRODUCTIVITY PROGRESS
+========================================= -->
+
+        <section class="progress-section">
+
+            <div class="progress-header">
+                <div>
+                    <span class="progress-label">Productivity Progress</span>
+                    <p>Keep going — you're making progress!</p>
+                </div>
+
+                <strong id="progressPercentage">0%</strong>
+            </div>
+
+            <div class="progress-track">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+
+        </section>
+        <section class="add-task" aria-label="Add a new task">
+
+            <div class="input-wrapper">
+
+                <span class="input-icon">+</span>
+
+                <input type="text" id="taskInput" placeholder="What needs to be done?" autocomplete="off"
+                    aria-label="Task name">
+
+            </div>
+
+            <button id="addTaskBtn" type="button">
+                <span>+</span>
+                Add Task
+            </button>
+
+        </section>
+
+
+        <!-- =========================================
+             TASK DASHBOARD
+        ========================================== -->
+
+        <section class="task-dashboard">
+
+            <!-- Pending Tasks -->
+
+            <div class="task-section">
+
+                <div class="section-header">
+
+                    <div class="section-title">
+
+                        <div class="section-icon pending-icon">
+                            ○
+                        </div>
+
+                        <div>
+                            <h2>Pending Tasks</h2>
+
+                            <p>
+                                Tasks waiting to be completed
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <span id="pendingCount">
+                        0 pending
+                    </span>
+
+                </div>
+
+
+                <div id="pendingTasks" class="task-list">
+
+                    <p class="empty-message" id="pendingEmpty">
+                        No pending tasks. Add a task to get started!
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Completed Tasks -->
+
+            <div class="task-section">
+
+                <div class="section-header">
+
+                    <div class="section-title">
+
+                        <div class="section-icon completed-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <h2>Completed Tasks</h2>
+
+                            <p>
+                                Tasks you have finished
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <span id="completedCount">
+                        0 completed
+                    </span>
+
+                </div>
+
+
+                <div id="completedTasks" class="task-list">
+
+                    <p class="empty-message" id="completedEmpty">
+                        No completed tasks yet.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             PRODUCTIVITY TIP
+        ========================================== -->
+
+        <section class="productivity-tip">
+
+            <div class="tip-icon">
+                💡
+            </div>
+
+            <div>
+                <strong>Productivity Tip</strong>
+
+                <p>
+                    Break large tasks into smaller steps and
+                    complete them one at a time.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             FOOTER
+        ========================================== -->
+
+        <footer class="footer">
+
+            <p>
+                TaskFlow — Simple tasks. Better productivity.
+            </p>
+
+            <p>
+                Built with HTML5, CSS3 & JavaScript
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
