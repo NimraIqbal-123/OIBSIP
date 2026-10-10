@@ -1,0 +1,346 @@
+/* ===== Global Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #101828, #243b67, #57418c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    color: #1e293b;
+}
+
+/* ===== Main Container ===== */
+.auth-container {
+    width: 100%;
+    max-width: 440px;
+}
+
+.auth-card {
+    background: #ffffff;
+    padding: 38px;
+    border-radius: 22px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Branding ===== */
+.brand {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.brand-icon {
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 14px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.brand h1 {
+    font-size: 27px;
+    color: #172554;
+    margin-bottom: 7px;
+}
+
+.brand p,
+.form-description {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* ===== Login and Register Tabs ===== */
+.tabs {
+    display: flex;
+    gap: 8px;
+    padding: 5px;
+    background: #f1f5f9;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.tab {
+    flex: 1;
+    border: none;
+    padding: 12px;
+    border-radius: 9px;
+    cursor: pointer;
+    background: transparent;
+    color: #64748b;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.tab.active {
+    background: #ffffff;
+    color: #5b4bd8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Form Fields ===== */
+form h2,
+#dashboard h2 {
+    font-size: 23px;
+    color: #172554;
+    margin-bottom: 8px;
+}
+
+.form-description {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #334155;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    margin-bottom: 19px;
+    font-size: 14px;
+    color: #1e293b;
+    background: #ffffff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.13);
+}
+
+.hint {
+    color: #64748b;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 18px;
+}
+
+/* ===== Buttons ===== */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #6366f1, #7c3aed);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* ===== Feedback Messages ===== */
+.message {
+    display: none;
+    padding: 12px;
+    border-radius: 9px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.message.success {
+    display: block;
+    background: #dcfce7;
+    color: #166534;
+}
+
+.message.error {
+    display: block;
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* ===== Protected Dashboard ===== */
+#dashboard p {
+    color: #64748b;
+    line-height: 1.7;
+    margin: 14px 0;
+}
+
+#dashboard .submit-btn {
+    margin-top: 15px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    margin-top: 28px;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    .auth-card {
+        padding: 26px 22px;
+    }
+
+    .brand h1 {
+        font-size: 24px;
+    }
+
+    form h2,
+    #dashboard h2 {
+        font-size: 21px;
+    }
+}
+
+/* ===== Compact Layout Fix ===== */
+
+body {
+    padding: 12px;
+}
+
+.auth-container {
+    max-width: 390px;
+}
+
+.auth-card {
+    padding: 24px 28px;
+    border-radius: 18px;
+}
+
+.brand {
+    margin-bottom: 18px;
+}
+
+.brand-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 23px;
+    border-radius: 12px;
+    margin-bottom: 9px;
+}
+
+.brand h1 {
+    font-size: 23px;
+    margin-bottom: 4px;
+}
+
+.brand p {
+    font-size: 12px;
+}
+
+.tabs {
+    margin-bottom: 18px;
+}
+
+.tab {
+    padding: 9px;
+    font-size: 14px;
+}
+
+form h2,
+#dashboard h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.form-description {
+    margin-bottom: 16px;
+}
+
+label {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+input {
+    padding: 10px 12px;
+    font-size: 13px;
+    margin-bottom: 13px;
+}
+
+.hint {
+    font-size: 11px;
+    margin-top: -6px;
+    margin-bottom: 13px;
+}
+
+.submit-btn {
+    padding: 11px;
+    font-size: 14px;
+}
+
+.message {
+    padding: 9px 11px;
+    margin-bottom: 13px;
+    font-size: 12px;
+}
+
+footer {
+    margin-top: 18px;
+    font-size: 11px;
+}
+
+/* Smaller laptop screens */
+@media (max-height: 750px) {
+    .auth-card {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    .brand {
+        margin-bottom: 12px;
+    }
+
+    .tabs {
+        margin-bottom: 13px;
+    }
+
+    .form-description {
+        margin-bottom: 12px;
+    }
+
+    input {
+        margin-bottom: 10px;
+    }
+
+    footer {
+        margin-top: 12px;
+    }
+}

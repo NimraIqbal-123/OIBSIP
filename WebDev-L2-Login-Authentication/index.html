@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureAuth | Login System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="auth-container">
+        <section class="auth-card">
+            <div class="brand">
+                <div class="brand-icon">S</div>
+                <h1>Authentication System
+                </h1>
+                <p>Your secure space starts here.</p>
+            </div>
+
+            <div class="tabs">
+                <button id="loginTab" class="tab active" type="button">
+                    Login
+                </button>
+                <button id="registerTab" class="tab" type="button">
+                    Register
+                </button>
+            </div>
+
+            <div id="message" class="message" role="alert" aria-live="polite"></div>
+
+            <form id="loginForm">
+                <h2>Welcome back!</h2>
+                <p class="form-description">Log in to your account.</p>
+
+                <label for="loginUsername">Username or Email</label>
+                <input id="loginUsername" type="text" placeholder="Enter username or email" autocomplete="username"
+                    required>
+
+                <label for="loginPassword">Password</label>
+                <input id="loginPassword" type="password" placeholder="Enter your password"
+                    autocomplete="current-password" required>
+
+                <button class="submit-btn" type="submit">Login</button>
+            </form>
+
+            <form id="registerForm" hidden>
+                <h2>Create an account</h2>
+                <p class="form-description">Join us in a few easy steps.</p>
+
+                <label for="registerUsername">Username</label>
+                <input id="registerUsername" type="text" placeholder="Choose a username" autocomplete="username"
+                    required>
+
+                <label for="registerEmail">Email Address</label>
+                <input id="registerEmail" type="email" placeholder="Enter your email" autocomplete="email" required>
+
+                <label for="registerPassword">Password</label>
+                <input id="registerPassword" type="password" placeholder="At least 8 characters"
+                    autocomplete="new-password" required>
+
+                <p class="hint">Use at least 8 characters and 1 number.</p>
+
+                <button class="submit-btn" type="submit">Register</button>
+            </form>
+
+            <section id="dashboard" hidden>
+                <h2>You're logged in!</h2>
+                <p id="welcomeMessage"></p>
+                <p>You have successfully accessed the protected page.</p>
+                <button id="logoutBtn" class="submit-btn" type="button">
+                    Logout
+                </button>
+            </section>
+
+            <footer>© 2026 SecureAuth · Internship Project</footer>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
